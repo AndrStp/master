@@ -5,9 +5,9 @@ module "base" {
   resource_group_location    = var.base_resource_group_location
 
   # KeyVault secrets
-  docker_username_keyvault_secret_value = var.docker_username_keyvault_secret_name
-  docker_password_keyvault_secret_value = var.docker_password_keyvault_secret_name
-  docker_email_keyvault_secret_value    = var.docker_email_keyvault_secret_name
+  docker_username_keyvault_secret_value = var.docker_username_keyvault_secret_value
+  docker_password_keyvault_secret_value = var.docker_password_keyvault_secret_value
+  docker_email_keyvault_secret_value    = var.docker_email_keyvault_secret_value
 }
 
 module "cluster" {
