@@ -1,3 +1,9 @@
 sp.txt
-.terraform
 env_vars.sh
+.terraform
+.terraform.tfstate.lock.info
+terraform.tfstate
+terraform.tfstate.backup
+venv
+.pycache
+kubeconfig
