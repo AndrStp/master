@@ -1,8 +1,8 @@
 module "base" {
   source = "./modules/base"
 
-  resource_group_name_prefix = var.resource_group_name_prefix
-  resource_group_location    = var.resource_group_location
+  resource_group_name_prefix = var.base_resource_group_name_prefix
+  resource_group_location    = var.base_resource_group_location
 
   # KeyVault secrets
   docker_username_keyvault_secret_value = var.docker_username_keyvault_secret_name
@@ -12,8 +12,9 @@ module "base" {
 
 module "cluster" {
   source = "./modules/aks"
-
-  resource_group_name     = module.base.resource_group_name
+  
+  resource_group_name_prefix = var.cluster_resource_group_name_prefix
+  resource_group_location    = var.cluster_resource_group_location
 }
 
 module "kubernetes_config" {
