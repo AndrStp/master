@@ -23,8 +23,8 @@ resource "kubernetes_config_map_v1" "config" {
   }
 
   data = {
-    api_host             = "myhost:443"
-    db_host              = "dbhost:5432"
+    NAME     = var.config_env_name
+    LOCATION = var.config_env_location
   }
 }
 

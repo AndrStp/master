@@ -16,6 +16,18 @@ variable "configmap_name" {
   default     = "config"
 }
 
+variable "config_env_name" {
+  description = "Key `NAME` value for configmap. Defaults to `test`"
+  type        = string
+  default     = "test"
+}
+
+variable "config_env_location" {
+  description = "Key `LOCATION` value for configmap. Defaults to `testland`"
+  type        = string
+  default     = "testland"
+}
+
 variable "docker_server" {
   description = "THe docker registry address"
   type        = string
