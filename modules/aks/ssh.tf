@@ -17,4 +17,6 @@ resource "azapi_resource" "ssh_public_key" {
   name      = random_pet.ssh_key_name.id
   location  = data.azurerm_resource_group.this.location
   parent_id = data.azurerm_resource_group.this.id
+
+  schema_validation_enabled = false
 }

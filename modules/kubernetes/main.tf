@@ -47,7 +47,7 @@ resource "kubernetes_secret_v1" "docker_cfg" {
           "username" = data.azurerm_key_vault_secret.docker_username.value
           "password" = data.azurerm_key_vault_secret.docker_password.value
           "email"    = data.azurerm_key_vault_secret.docker_email.value
-          "auth"     = base64encode("${data.azurerm_key_vault_secret.docker_username}:${data.azurerm_key_vault_secret.docker_password}")
+          "auth"     = base64encode("${data.azurerm_key_vault_secret.docker_username.value}:${data.azurerm_key_vault_secret.docker_password.value}")
         }
       }
     })
