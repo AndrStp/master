@@ -20,7 +20,7 @@ spec:
         - containerPort: 5000
         envFrom:
         - configMapRef:
-            name: master
+            name: config
 ---
 apiVersion: v1
 kind: Service
