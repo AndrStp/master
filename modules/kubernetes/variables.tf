@@ -31,7 +31,7 @@ variable "config_env_location" {
 variable "docker_server" {
   description = "THe docker registry address"
   type        = string
-  default     = "https://index.docker.io/v1"
+  default     = "https://index.docker.io/v1/"
 }
 
 variable "docker_username_keyvault_secret_name" {
